@@ -1,0 +1,70 @@
+html {
+    box-sizing: border-box;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+  
+.footer {
+  /* height: 150px; */
+  width: 100%;
+  background: beige;
+  bottom: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.contact-box {
+  width: 150px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.contact-info {
+  /* margin-top: 20px; */
+  width: 50px;
+}
+
+.credits {
+  font-size: 10px;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  text-align: right;
+  width: 100%;
+  padding-right: 5px;
+  padding-bottom: 3px;
+}
+
+.copyright {
+  align-self: flex-end;
+}
+
+#facebook {
+  height: 39px;
+  margin-top: 6px;
+}
+
+@media (min-width: 750px) {
+  .contact-box {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

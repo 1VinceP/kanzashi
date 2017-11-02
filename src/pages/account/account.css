@@ -1,0 +1,123 @@
+html {
+    box-sizing: border-box;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.account-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account-body h2 {
+    font-size: 20px;
+}
+
+.account-sub-title {
+    font-size: 18px;
+    text-align: center;
+}
+
+.bg-box {
+    width: 90%;
+    background: beige; 
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 110%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.where {
+    font-size: 14px;
+    align-self: left;
+    margin-left: 20px;
+}
+
+.bg-box input {
+    width: 90%;
+    height: 30px;
+    padding-left: 10px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.change-button {
+    height: 35px;
+    width: 75%;
+    border: none;
+    border-radius: 10px;
+    background: #ffb347;
+    font-size: 20px;
+    letter-spacing: .75px;
+}
+
+.orders-box {
+    width: 90%;
+    background: beige; 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 110%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.orders-box h2 {
+    font-size: 18px;
+}
+
+.previous-section {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 750px) {
+    .account-body {
+        margin-top: 30px;
+    }
+
+    .where {
+        margin-left: 30px;
+    }
+
+    .bg-box input {
+        height: 35px;
+    }
+
+    .change-button {
+        width: 60%;
+        height: 45px;
+    }
+
+    .previous-section {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #large {
+        width: 60%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .account-body {
+        margin-top: 0;
+    }
+
+    .where {
+        margin-left: 50px;
+    }
+}

@@ -1,0 +1,161 @@
+html {
+    box-sizing: border-box;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.admin-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.filter-box {
+    width: 100%;
+    height: 80px;
+    background: beige;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.reset-filter-button {
+    margin-top: -15px;
+    height: 20px;
+    width: 30%;
+    border: none;
+    border-radius: 10px;
+    background: #DC5A5A;
+    font-size: 10px;
+    letter-spacing: .75px;
+    outline: none;
+}
+
+.admin-product-card {
+    width: 240px;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin-top: 20px;
+    padding: 10px 10px 0 10px;
+    box-shadow: 5px 5px 10px #808080;    
+}
+
+    .admin-product-card div {
+        margin-bottom: 5px;
+    }
+
+.admin-order-header {
+    width: calc(100% + 22px );
+    margin-top: -10px;
+    padding: 5px;
+    align-self: center;
+    color: white;
+    letter-spacing: 1px;
+    border-radius: 10px 10px 0 0;
+}
+
+        .blue-header {
+            background: #5959FD;
+        }
+
+        .pink-header {
+            background: #FF3C9D;
+        }
+
+        .yellow-header {
+            background: #FAFD59;
+        }
+
+        .blue-border {
+            border: 1px solid #5959FD;
+        }
+
+        .pink-border {
+            border: 1px solid #FF3C9D;
+        }
+
+        .yellow-border {
+            border: 1px solid #FAFD59;
+        }
+
+.shipped-button {
+    margin-top: 5px;
+    height: 20px;
+    width: 50%;
+    border: none;
+    border-radius: 10px;
+    background: #91DC5A;
+    font-size: 10px;
+    letter-spacing: .5px;
+    outline: none;
+    align-self: center;
+}
+
+.unship-button {
+    margin-top: 5px;
+    height: 20px;
+    width: 50%;
+    border: none;
+    border-radius: 10px;
+    background: #ffb347;
+    font-size: 10px;
+    letter-spacing: .5px;
+    outline: none;
+    align-self: center;
+}
+
+.admin-show-address {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 10px;
+}
+
+.random-starwars {
+    width: 90%;
+    background: beige;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.starwars-button {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    height: 35px;
+    width: 75%;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    letter-spacing: .75px;
+    background: rgb(38, 38, 126);
+    color: beige;
+}
+
+@media (min-width: 750px) {
+    .filter-box {
+        margin-top: 30px;
+    }
+
+    .orders-box h2 {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .filter-box {
+        margin-top: 0;
+    }
+
+    .random-starwars {
+        width: 40%;
+    }
+}

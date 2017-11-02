@@ -1,0 +1,15 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.buffer {
+  height: 50px;
+  width: 100%;
+}

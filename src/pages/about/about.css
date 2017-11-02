@@ -1,0 +1,34 @@
+html {
+    box-sizing: border-box;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.about-hero {
+    height: 0;
+    width: 100%;
+    padding-top: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../images/aboutHero.JPG');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 0 0 10px 10px;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 750px) {
+    .about-hero {
+        width: 90%;
+        padding-top: 42%;
+        border-radius: 0 0 10px 10px;
+        margin-top: 30px;
+    }
+}

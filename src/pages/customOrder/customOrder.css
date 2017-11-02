@@ -1,0 +1,287 @@
+html {
+    box-sizing: border-box;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.order-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.log-in-banner {
+    width: 100%;
+    height: 30px;
+    font-size: 12;
+    background: #DC5A5A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: fixed;
+}
+
+.mini-login-link {
+    color: white;
+}
+
+.order-div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}  
+
+.order-header {
+    width: 90%;
+    height: 100px;
+    background: beige; 
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 110%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 750ms ease-in-out;
+    overflow: hidden;
+}
+
+.show-me {
+    background: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 11px;
+}
+
+.order-header:hover {
+    height: 670px;
+}
+
+.order-center {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.order-hero {
+    display: none;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+.no-content {
+    font-size: 14px;
+    width: 185px;
+    text-align: center;
+}
+
+.character-limit {
+    margin-top: 2px;
+    font-size: 14px;
+}
+
+.image-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    background: beige; 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 110%;
+    margin-top: 10px;
+}
+
+.image-display img {
+    width: 192px;
+    height: 160px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.submit-order-button {
+    margin-top: 10px;
+    height: 35px;
+    width: 75%;
+    border: none;
+    border-radius: 10px;
+    background: #91DC5A;
+    font-size: 20px;
+    letter-spacing: .75px;
+}
+
+.clear-button {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    height: 35px;
+    width: 75%;
+    border: none;
+    border-radius: 10px;
+    background: #DC5A5A;
+    font-size: 20px;
+    letter-spacing: .75px;
+}
+
+@media (min-width: 750px) {
+    .order-body {
+        margin-top: 30px;
+    }
+
+    .order-header {
+        width: 80%;
+        height: 80px;
+    }
+
+    .order-hero-head-one {
+        display: flex;
+        height: 175px;
+        width: 30%;
+        background-image: url('../../images/orderHeadband1.JPG');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border-radius: 10px;
+        align-self: center;
+    }
+
+    .order-hero-head-two {
+        display: flex;
+        height: 175px;
+        width: 30%;
+        background-image: url('../../images/orderHeadband2.JPG');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border-radius: 10px;
+        align-self: center;
+    }
+
+    .order-hero-flower-one {
+        display: flex;
+        height: 175px;
+        width: 30%;
+        background-image: url('../../images/orderFlower1.JPG');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border-radius: 10px;
+        align-self: center;
+    }
+
+    .order-hero-flower-two {
+        display: flex;
+        height: 175px;
+        width: 30%;
+        background-image: url('../../images/orderFlower2.JPG');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border-radius: 10px;
+        align-self: center;
+    }
+
+    .order-hero-center-one {
+        display: flex;
+        height: 305px;
+        width: 30%;
+        background-image: url('../../images/orderHero1.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border-radius: 10px;
+        align-self: center;
+    }
+    
+    .order-hero-center-two {
+        display: flex;
+        height: 305px;
+        width: 30%;
+        background-image: url('../../images/orderHero2.jpeg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        border-radius: 10px;
+        align-self: center;
+    }
+
+    .image-display {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .order-body {
+        margin-top: 0;
+    }
+
+    .order-header {
+        width: 57%;
+    }
+
+    .order-header:hover {
+        height: 500px;
+    }
+
+    .show-me {
+        width: 600px;
+    }
+
+    .order-hero-head-one {
+        height: 300px;
+        width: 400px;
+    }
+
+    .order-hero-head-two {
+        height: 300px;
+        width: 400px;
+    }
+
+    .order-hero-flower-one {
+        height: 300px;
+        width: 400px;
+    }
+
+    .order-hero-flower-two {
+        height: 300px;
+        width: 400px;
+    }
+
+    .order-hero-center-one {
+        height: 533px;
+        width: 400px;
+    }
+
+    .form-content {
+        align-self: center;
+    }
+
+    .order-hero-center-two {
+        height: 533px;
+        width: 400px;
+    }
+
+    .image-display {
+        width: 60%;
+    }
+
+    .image-display img {
+        width: 60%;
+        height: 340px;
+    }
+
+    .submit-order-button {
+        height: 45px;
+        width: 40%;
+    }
+
+    .clear-button {
+        height: 45px;
+        width: 40%;
+    }
+}

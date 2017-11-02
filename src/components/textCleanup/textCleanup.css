@@ -1,0 +1,129 @@
+.home-buttons {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    height: 35px;
+    width: 75%;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    letter-spacing: .75px;
+}
+
+#store-button {
+    background: #91DC5A;    
+}
+
+#custom-order-button {
+    background: #ffb347;    
+}
+
+#about-button {
+    background: #5A9ADC;    
+}
+
+.about-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-top {
+    width: 90%;
+    background: beige; 
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: left;
+    line-height: 110%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-image {
+    width: 150px;
+    border-radius: 10%;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.about-header {
+    align-self: center;
+    font-size: 22px;
+}
+
+.about-info {
+    width: 90%;
+    background: beige; 
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: left;
+    line-height: 110%;
+    margin-top: -20px;
+  }
+
+  .attribute-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .attribute-description p {
+      width: 250px;
+  }
+
+  @media (min-width: 750px) {
+      .home-buttons {
+        height: 45px;
+        width: 60%;
+      }
+
+      .about-image {
+          height: 214px;
+      }
+
+      .about-top {
+          width: 80%;
+      }
+
+      .about-info {
+          width: 80%;
+          padding: 20px 60px;
+          font-size: 22px;
+      }
+
+      .attribute-description {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          margin: 20px 0;
+      }
+
+      .attribute-description p {
+        width: 250px;
+        margin-bottom: 25px;
+      }
+  }
+
+  @media (min-width: 1000px) {
+    .about-top {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        padding: 0;
+        background: none;
+    }
+
+    .about-info {
+        background: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .small-about {
+        display: none;
+    }
+  }
