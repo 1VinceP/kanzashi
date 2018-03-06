@@ -7,6 +7,7 @@
     border-radius: 10px;
     font-size: 20px;
     letter-spacing: .75px;
+    cursor: pointer;
 }
 
 #store-button {
@@ -29,7 +30,7 @@
 
 .about-top {
     width: 90%;
-    background: beige; 
+    background: #efefef; 
     padding: 20px;
     border-radius: 10px;
     font-size: 18px;
@@ -55,7 +56,7 @@
 
 .about-info {
     width: 90%;
-    background: beige; 
+    background: #efefef; 
     padding: 20px;
     border-radius: 10px;
     font-size: 18px;

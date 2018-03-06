@@ -17,12 +17,10 @@ class Gallery extends Component {
         window.scrollTo( 0, 0 )
 
         axios.get( '/api/products' ).then( response => {
-            console.log( response.data )
             this.setState({
                  gallery: response.data
                 })
             })
-        console.log( this.state.gallery )
     }
 
     render() {

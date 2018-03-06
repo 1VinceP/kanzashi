@@ -1,7 +1,6 @@
 module.exports = {
 
     login: function( req, res ) {
-        console.log( req.user )
         if( !req.user )
             return res.status(404).send( 'User not found' )
         else
@@ -9,7 +8,7 @@ module.exports = {
     },
 
     logout: function( req, res ) {
-        req.logOut(); // Lougout function given from passport
-        return res.redirect( 302, 'http://localhost:3000/#/' ); // res.redirect comes from express
+        req.logOut(); // Logout function given from passport
+        return res.redirect( 302, '/' ); // res.redirect comes from express
     }
 }

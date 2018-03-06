@@ -27,7 +27,7 @@ html {
 
 .img-card {
     width: 100%;
-    background: beige;
+    background: #efefef;
     border-radius: 10px;
     display: flex;
     flex-direction: column;

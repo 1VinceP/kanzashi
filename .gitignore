@@ -21,5 +21,6 @@ yarn-debug.log*
 yarn-error.log*
 
 .env
+.env.prod
 
 /src/pages/checkout/stripeKey.js

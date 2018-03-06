@@ -22,7 +22,7 @@ html {
 
 .bg-box {
     width: 90%;
-    background: beige; 
+    background: #efefef; 
     padding: 20px;
     border-radius: 10px;
     font-size: 22px;
@@ -61,7 +61,7 @@ html {
 
 .orders-box {
     width: 90%;
-    background: beige; 
+    background: #efefef; 
     padding: 20px;
     border-radius: 10px;
     text-align: center;

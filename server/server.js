@@ -9,17 +9,15 @@ const express = require('express')
     , chalk = require('chalk')
     , passport = require('passport')
     , stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
-    , nodemailer = require('nodemailer');
 
-const strategy = require('./strategy')
-    , auth_controller = require('./controllers/auth_controller')
+const auth_controller = require('./controllers/auth_controller')
     , products_controller = require('./controllers/products_controller')
-    , email_controller = require('./controllers/email_controller')
     , session_controller = require('./controllers/session_controller');
 
-// app.use( express.static( `${__dirname}../build` ) )
-
 let app = express();
+
+app.use( express.static( `${__dirname}/../build` ) )
+
 app.use( bodyParser.json() );
 app.use( cors() );
 app.use( session({
@@ -27,7 +25,6 @@ app.use( session({
     resave: false,
     saveUninitialized: false
 }) );
-// app.use( checkForSession );
 app.use( passport.initialize() );
 app.use( passport.session() );
 passport.use( module.exports = new Auth0Strategy({
@@ -43,49 +40,39 @@ passport.use( module.exports = new Auth0Strategy({
             if( user[0] )
                 return done( null, user )
             else {
-                // console.log( profile )
                 db.create_user( [profile.displayName, profile.emails[0].value, profile.id] )
                   .then( user => {
-                      console.log( 'New User Created' )
                     return done( null, user )
                 })
             };
         } );
-        // return done( null, profile )
     }) );
 
 
 ///////////// Connecting database
-// postgres:[username]:[password]@[host]:[port]/[database]
-// postgres://ergdmstw:${productPass}@stampy.db.elephantsql.com:5432/ergdmstw
-console.log( chalk.magenta(process.env.SQLURL) );
 massive( process.env.DATABASE_URL ).then( db => {
+    console.log( chalk.magenta('Connected to Database!') );
         app.set( 'db', db );
     //     app.get('db').init.seed().then( res => console.log( res ) )
     // } ).catch( err => {
     //     console.log( err );
 } )
 
+console.log( process.env.NODE_ENV )
+
 ///////////////////////////////////////////////////////////////// AUTHENTICATION
 passport.serializeUser( ( user, done ) => {
-    // console.log( user )
     done( null, user )
 } );
 passport.deserializeUser( ( obj, done ) => {
-    // console.log( 'dev', obj )
-    // app.get('db').find_session_user( user[0].id ).then( user => {
-
-        done( null, obj[0] )
-
-
-    // })
+    done( null, obj[0] )
 } );
 
 // AUTH CONTROLLER
 app.get( '/auth', passport.authenticate( 'auth0' ) );
 app.get( '/auth/callback', passport.authenticate( 'auth0', {
-    successReturnToOrRedirect: 'http://localhost:3000/#/',
-    failureRedirect: 'http://localhost:3000/#/',
+    successReturnToOrRedirect: process.env.SUCCESS,
+    failureRedirect: process.env.FAILURE,
     failureFlash: true
 }) );
 app.get( '/auth/me', auth_controller.login );
@@ -124,7 +111,7 @@ app.put( '/api/update_quantity/:id', products_controller.updateQuantity )
 
 ///////////////////////////////////////////////////////////////// STRIPE STUFF
 app.post('/api/payment', function(req, res, next){
-    //convert amount to pennies
+    // convert amount to pennies
     const amountArray = req.body.amount.toString().split('');
     const pennies = [];
     for (var i = 0; i < amountArray.length; i++) {
@@ -161,16 +148,11 @@ app.post('/api/payment', function(req, res, next){
   });
 ///////////////////////////////////////////////////////////////// END STRIPE STUFF
 
-///////////////////////////////////////////////////////////////// NODEMAILER
-app.post( '/api/send_email', email_controller.sendEmail );
-
-///////////////////////////////////////////////////////////////// END NODEMAILER
-
 
 
 
 let port = 9060;
 const portChalk = chalk.cyan.underline
 app.listen( port, () =>{
-console.log( portChalk(`listening on port ${port}`) )
+    console.log( portChalk(`listening_on_port_${port}`) )
 } )

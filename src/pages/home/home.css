@@ -22,14 +22,14 @@ html {
     background-image: url('../../images/hero.JPG');
     background-repeat: no-repeat;
     background-size: 100%;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 3px 3px;
 }
 
 .home-info {
   width: 90%;
-  background: beige; 
+  background: #efefef; 
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 3px;
   margin-top: -20px;
   font-size: 22px;
   text-align: center;
@@ -43,9 +43,9 @@ html {
 
 .home-body {
   width: 90%;
-  background: beige; 
+  background: #efefef; 
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 3px;
   margin-top: -20px;
   font-size: 18px;
   text-align: center;
@@ -61,7 +61,7 @@ html {
   .hero {
     width: 90%;
     padding-top: 42%;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 3px 3px;
     margin-top: 30px;
   }
 
@@ -110,8 +110,8 @@ html {
     width: 30%;
     height: 40%;
     align-self: center;
-    background: beige;
-    border-radius: 10px;
+    background: #efefef;
+    border-radius: 3px;
     padding: 20px;
     margin-top: 10px;
   }

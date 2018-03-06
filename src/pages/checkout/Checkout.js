@@ -25,7 +25,6 @@ class Checkout extends Component {
         window.scrollTo( 0, 0 )
 
         axios.get( '/api/getaddress' ).then( response => {
-            console.log( response )
             this.setState({
                 street1: response.data[0].street1,
                 street2: response.data[0].street2,
@@ -48,21 +47,11 @@ class Checkout extends Component {
     }
 
     onPurchaseConfirmation() {
-        // let data = {
-        //     username: 'vincent',
-        //     email: 'meisadude@gmail.com',
-        //     message: 'This is coming from Nodemailer!'
-        // }
-        // axios.post( 'http://localhost:9060/api/send_email', data ).then( response => {
-        //     console.log( response );
-        // })
-
         axios.put( '/api/update_paid/' + this.props.location.query.userId )
     }
 
     onToken = (token) => {
         token.card = void 0;
-        console.log('token', token);
         axios.post('http://localhost:9060/api/payment', { token, amount: this.state.price /* the amount actually charged*/ } ).then(response => {
             this.onPurchaseConfirmation();
             this.setState({
@@ -96,8 +85,6 @@ class Checkout extends Component {
                     stripeKey={ 'pk_test_k1ZmSbaquoQabEKXdT1RBe3x' }
                     amount={this.state.price} // The amount displayed at the bottom of the payment form
                 />
-
-                {/* <div onClick={ this.onPurchaseConfirmation }>Send email</div> */}
 
             </div>
         )

@@ -21,7 +21,6 @@ class Admin extends Component {
         }
 
         this.resetFilter = this.resetFilter.bind(this)
-        // this.getStarwars = this.getStarwars.bind(this)
     }
 
     componentDidMount () {
@@ -34,7 +33,6 @@ class Admin extends Component {
         })
 
         axios.get( '/api/all_users' ).then( response => {
-            console.log('res:', response.data)
             this.setState({
                 users: response.data
             })
@@ -48,7 +46,6 @@ class Admin extends Component {
         this.setState({
             [name]: value
         })
-        console.log( this.state.type )
     }
 
     resetFilter() {

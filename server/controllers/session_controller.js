@@ -7,7 +7,7 @@ module.exports = {
             return res.send( null )
         }
         else if( req.user ) {
-            console.log( chalk.green('It Works!'), req.user )
+            console.log( chalk.green('User logged in:'), req.user )
             return res.send( req.user )
         }
     },
@@ -18,8 +18,6 @@ module.exports = {
         req.app.get('db').update_address( [ id, street1, street2, city, state, zip ] )
             .then( (response) => res.status(200).send(response) )
             .catch( () => {
-                console.log('request failed')
-                console.log( id, street1, street2, city, state, zip )
                 res.status(500).send()
             } )
     },
@@ -33,10 +31,4 @@ module.exports = {
         }
         
     }
-
-    // getAllUsers: ( req, res, next ) => {
-
-    //     req.app.get('db').all_users()
-    //         .then( response => res.status(200).send(response) )
-    // }
 }

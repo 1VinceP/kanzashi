@@ -8,12 +8,12 @@ html {
 .header {
     height: 50px;
     width: 100%;
-    background: beige;
+    background: #fafafa;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    box-shadow: 0 3px 2px #C1C1C1;
+    box-shadow: 0 4px 8px rgba(170, 170, 170, 0.7);
     position: fixed;
 }
 
@@ -30,8 +30,9 @@ html {
 }
 
 .header-title {
+    width: 220px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     color: #91DC5A;
 }
 
@@ -46,7 +47,7 @@ html {
 
     .header-title {
         color: #91DC5A;
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .large-nav {

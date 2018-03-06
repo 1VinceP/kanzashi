@@ -4,8 +4,6 @@ import './header.css';
 import hamMenu from '../../images/ham-menu.svg';
 import { Link } from 'react-router-dom';
 
-// import SideNav from './SideNav';
-
 class Header extends Component {
     constructor() {
         super();
@@ -27,7 +25,6 @@ class Header extends Component {
                     email: user.data.email
                 })
             }
-            // console.log( 'user:', this.state.username )
         })
 
     }
@@ -73,7 +70,7 @@ class Header extends Component {
                         }
                     </div>
 
-                    <Link to='/' className='link'><div className='header-title'>Kanzashi</div></Link>
+                    <Link to='/' className='link'><div className='header-title'>Tree Frogs Wed</div></Link>
                 </div>
             </div>
         )

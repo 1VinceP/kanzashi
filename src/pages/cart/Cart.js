@@ -23,13 +23,11 @@ class Cart extends Component {
                     userId: user.data.id
                 })
             }
-            console.log( 'userId:', this.state.userId )
         }).then( () => { axios.get( `/api/cart/${this.state.userId}` )
             .then( response => {
                 this.setState({
                     cart: response.data
                 })
-                console.log( response )
                 this.countCart( response.data )
         } ) } )
         
@@ -46,8 +44,6 @@ class Cart extends Component {
         this.setState({
             cartAmount: amount
         })
-
-        console.log( 'amount on state:', this.state.cartAmount )
     };
 
     deleteItem( id ) {
@@ -58,7 +54,6 @@ class Cart extends Component {
                 })
                 this.countCart( response.data )
             } ) } )
-        console.log( 'deleted' )
     };
 
     render() {
@@ -84,12 +79,10 @@ class Cart extends Component {
                     <div><b>Quantity:</b> {cart.quantity}</div>
                     <button className='delete-button' onClick={ () => this.deleteItem( cart.id ) }>&#10006;</button>
                 </div>
-                : console.log( 'Cannot display cart' ) )
+                : null )
             )
         } )
 
-        console.log( 'cart:', this.state.cart )
-        console.log( 'cartMap:', cartMap )
         return(
             <div className='cart-body'>
                 <br/><br/>

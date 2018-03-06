@@ -8,14 +8,13 @@ html {
 .mobile-menu-container {
     height: 100vh;
     width: 90%;
-    background: #F1F1CC;
+    background: #fafafa;
     position: fixed;
     left: -92%;
     top: 0;
     z-index: 100;
     color: white;
     list-style: none;
-    border-radius: 0 20px 20px 0;
     box-shadow: 3px 0 10px #C1C1C1;
     transition: .35s ease-out;
 }

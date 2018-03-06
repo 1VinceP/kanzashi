@@ -29,7 +29,6 @@ class Account extends Component {
         window.scrollTo( 0, 0 )   
         
         axios.get( '/api/getaddress' ).then( response => {
-            console.log( response )
             this.setState({
                 currentS1: response.data[0].street1,
                 currentS2: response.data[0].street2,
@@ -38,7 +37,6 @@ class Account extends Component {
                 currentZip: response.data[0].zip
             })
         })
-        // console.log( this.state.currentS1 )
 
         axios.get( `/api/cart/${this.props.location.query.id}` ).then( response => {
             this.setState({
@@ -54,11 +52,9 @@ class Account extends Component {
         this.setState({
             [name]: value
         })
-        // console.log( this.state.street1, this.state.street2, this.state.city, this.state.state, this.state.zip )
     };
 
     submitAddress() {
-        console.log( this.props.location.query.id )
         let body = {
             id: this.props.location.query.id,
             street1: this.state.street1 === '' ? this.state.currentS1 : this.state.street1,
@@ -71,7 +67,6 @@ class Account extends Component {
         axios.put( '/api/updateaddress', body ).then( ( response ) => {
             
             axios.get( '/api/getaddress' ).then( response => {
-                console.log( response )
                 this.setState({
                     currentS1: response.data[0].street1,
                     currentS2: response.data[0].street2,
@@ -105,7 +100,7 @@ class Account extends Component {
                     <div><b>Request</b>: {cart.request}</div>
                     <div><b>Quantity</b>: {cart.quantity}</div>
                 </div>
-                : console.log( 'Cannot display cart' ) )
+                : null )
             )
         } );
 
@@ -129,7 +124,7 @@ class Account extends Component {
                     <div><b>Request</b>: {cart.request}</div>
                     <div><b>Quantity</b>: {cart.quantity}</div>
                 </div>
-                : console.log( 'Cannot display cart' ) )
+                : null )
             )
         } )
 

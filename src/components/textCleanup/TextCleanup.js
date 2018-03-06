@@ -60,7 +60,6 @@ export function aboutBody() {
 export function attributeDescription() {
     return(
         <div className='attribute-description'>
-            {/* <br/> */}
             <p><b>Product Type:</b><br/>This is the type of item</p><br/>
             <p><b>Material Style:</b><br/>This is design of the base headband</p><br/>
             <p><b>Primary Color:</b><br/>The most prominent color</p><br/>

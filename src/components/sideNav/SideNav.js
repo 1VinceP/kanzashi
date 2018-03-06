@@ -25,15 +25,10 @@ class SideNav extends Component {
                     email: user.data.email
                 })
             }
-            console.log( 'user:', this.state.username )
         })
-
-
     }
 
     render() {
-
-        console.log( 'navIsOpen:', this.props.displayMenu )
         return(
             <div className={ 'mobile-menu-container ' + (this.props.displayMenu ? 'show' : null) }>
                 <div className='menu-header'>

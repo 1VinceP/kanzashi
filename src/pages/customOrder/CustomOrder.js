@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Headband from './Headband';
 import Flower from './Flower';
 import Centerpiece from './Centerpiece';
 import { attributeDescription } from '../../components/textCleanup/TextCleanup';
 import './customOrder.css';
-// import hero1 from '../../images/orderHero1.jpg';
 
 class CustomOrder extends Component {
     constructor() {
@@ -46,8 +44,6 @@ class CustomOrder extends Component {
                     userId: user.data.id
                 })
             }
-            console.log( 'user:', this.state.user )
-            console.log( 'userId', this.state.userId )
         })
         
     };
@@ -63,7 +59,6 @@ class CustomOrder extends Component {
             this.setState({
                 [name]: value
             })
-            // console.log(this.state)
         }
 
         
@@ -103,7 +98,6 @@ class CustomOrder extends Component {
             document.getElementById("orderForm").reset();
 
             if( value ) {
-                // console.log( 'if:', value )
                 document.getElementById('orderType').value = value
                 this.setState({
                     orderType: value,
@@ -118,7 +112,6 @@ class CustomOrder extends Component {
                     quantity: 1
                 })
             } else {
-                // console.log('else')
                 this.setState({
                     orderType: '',
                     orderMaterial: '',
@@ -150,12 +143,12 @@ class CustomOrder extends Component {
             <div className='order-body'>
 
                 {/* Displays a banner prompting the user to log in so they can place an order */}
-                { !this.state.user 
+                {/* !this.state.user 
                     ? <section className='log-in-banner'>
                         <p>Please <a href={ process.env.REACT_APP_LOGIN } className='mini-login-link' >Log In</a> to place an order</p>
                     </section>
                     : null
-                }
+                */}
                 
                 <div className='order-div'>
                     <div className='order-header'>Please specify directions for each attribute marked with a star (*) in the comments section
@@ -206,21 +199,12 @@ class CustomOrder extends Component {
                     </div>
 
                 </div>
-
-                {/* <div className='image-display'>
-                    <h3>Product Preview</h3>
-                    <p>*This is an example of what your product might look like, but may not be exact due to your specifications and our database*</p>
-                        { this.state.orderType === 'headband' && this.state.orderDecoration === 'butterfly' ? <img src='https://photos-2.dropbox.com/t/2/AADFz574Y9bpZ60sXu-F-xH0Aha_b3Ri_DJhc88firHPHg/12/632623851/jpeg/32x32/1/_/1/2/DSCF9125.JPG/EMiZ0eAFGDYgBygH/Shs4Pjg5VDm0tnoCbQUYShCFd9A_sF7RwoOrjT5F3xA?size=1280x960&size_mode=3' alt='' />
-                        : this.state.orderType === 'headband' && this.state.orderDecoration === 'rose' ? <img src="https://photos-6.dropbox.com/t/2/AAAnbmQAuI8lm0dKVMLw5PywLR5AV2QwAGYWfhsG53sY-g/12/632623851/jpeg/32x32/1/_/1/2/DSCF9129.JPG/EMiZ0eAFGDYgBygH/V60MDm2dVDuvblDGLYgHKZ0BBCVOK7IFsEzYT_Sz5K8?size=1280x960&size_mode=3" alt='' />
-                        : null }
-                </div> */}
                 
                 <br/>
                 { this.state.user
                     ? <button className='submit-order-button' onClick={ this.submitOrder }>Submit Item to Cart</button>
                     : null
                 }
-                {/* <button className='submit-order-button' onClick={ this.submitOrder }>Submit Item to Cart</button> */}
                 
                 <button className='clear-button' onClick={ () => this.resetSelections('') }>Clear Selections</button>
             </div>
