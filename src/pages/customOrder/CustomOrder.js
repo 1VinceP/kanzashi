@@ -143,12 +143,12 @@ class CustomOrder extends Component {
             <div className='order-body'>
 
                 {/* Displays a banner prompting the user to log in so they can place an order */}
-                {/* !this.state.user 
+                { !this.state.user 
                     ? <section className='log-in-banner'>
                         <p>Please <a href={ process.env.REACT_APP_LOGIN } className='mini-login-link' >Log In</a> to place an order</p>
                     </section>
                     : null
-                */}
+                }
                 
                 <div className='order-div'>
                     <div className='order-header'>Please specify directions for each attribute marked with a star (*) in the comments section

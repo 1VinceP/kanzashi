@@ -26,6 +26,7 @@ app.use( session({
     saveUninitialized: false
 }) );
 app.use( passport.initialize() );
+
 app.use( passport.session() );
 passport.use( module.exports = new Auth0Strategy({
     domain: process.env.DOMAIN,

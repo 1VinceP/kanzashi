@@ -42,7 +42,7 @@ html {
     height: 100px;
     background: #efefef; 
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 3px;
     font-size: 14px;
     text-align: center;
     line-height: 110%;
@@ -57,7 +57,7 @@ html {
 .show-me {
     background: white;
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 3px;
     margin-top: 11px;
 }
 
@@ -99,7 +99,7 @@ html {
     width: 90%;
     background: #efefef; 
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 3px;
     text-align: center;
     line-height: 110%;
     margin-top: 10px;
@@ -108,7 +108,7 @@ html {
 .image-display img {
     width: 192px;
     height: 160px;
-    border-radius: 10px;
+    border-radius: 3px;
     margin-top: 5px;
 }
 
@@ -117,10 +117,11 @@ html {
     height: 35px;
     width: 75%;
     border: none;
-    border-radius: 10px;
+    border-radius: 7px;
     background: #91DC5A;
     font-size: 20px;
     letter-spacing: .75px;
+    cursor: pointer;
 }
 
 .clear-button {
@@ -129,10 +130,11 @@ html {
     height: 35px;
     width: 75%;
     border: none;
-    border-radius: 10px;
+    border-radius: 7px;
     background: #DC5A5A;
     font-size: 20px;
     letter-spacing: .75px;
+    cursor: pointer;
 }
 
 @media (min-width: 750px) {
@@ -152,7 +154,7 @@ html {
         background-image: url('../../images/orderHeadband1.JPG');
         background-repeat: no-repeat;
         background-size: 100%;
-        border-radius: 10px;
+        border-radius: 3px;
         align-self: center;
     }
 
@@ -163,7 +165,7 @@ html {
         background-image: url('../../images/orderHeadband2.JPG');
         background-repeat: no-repeat;
         background-size: 100%;
-        border-radius: 10px;
+        border-radius: 3px;
         align-self: center;
     }
 
@@ -174,7 +176,7 @@ html {
         background-image: url('../../images/orderFlower1.JPG');
         background-repeat: no-repeat;
         background-size: 100%;
-        border-radius: 10px;
+        border-radius: 3px;
         align-self: center;
     }
 
@@ -185,7 +187,7 @@ html {
         background-image: url('../../images/orderFlower2.JPG');
         background-repeat: no-repeat;
         background-size: 100%;
-        border-radius: 10px;
+        border-radius: 3px;
         align-self: center;
     }
 
@@ -196,7 +198,7 @@ html {
         background-image: url('../../images/orderHero1.jpg');
         background-repeat: no-repeat;
         background-size: 100%;
-        border-radius: 10px;
+        border-radius: 3px;
         align-self: center;
     }
     
@@ -207,7 +209,7 @@ html {
         background-image: url('../../images/orderHero2.jpeg');
         background-repeat: no-repeat;
         background-size: 100%;
-        border-radius: 10px;
+        border-radius: 3px;
         align-self: center;
     }
 

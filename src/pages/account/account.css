@@ -24,7 +24,7 @@ html {
     width: 90%;
     background: #efefef; 
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 3px;
     font-size: 22px;
     text-align: center;
     line-height: 110%;
@@ -53,17 +53,18 @@ html {
     height: 35px;
     width: 75%;
     border: none;
-    border-radius: 10px;
+    border-radius: 7px;
     background: #ffb347;
     font-size: 20px;
     letter-spacing: .75px;
+    cursor: pointer;
 }
 
 .orders-box {
     width: 90%;
     background: #efefef; 
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 3px;
     text-align: center;
     line-height: 110%;
     display: flex;

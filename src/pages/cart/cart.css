@@ -19,7 +19,7 @@ html {
 .cart-card {
     /* width: 90%; */
     background: #efefef;
-    border-radius: 10px;
+    border-radius: 3px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -32,7 +32,7 @@ html {
 .cart-product-card {
     width: 240px;
     background: white;
-    border-radius: 10px;
+    border-radius: 3px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,9 +42,9 @@ html {
     box-shadow: 5px 5px 10px #808080;
 }
 
-    .cart-product-card div {
-        margin-bottom: 5px;
-    }
+.cart-product-card div {
+    margin-bottom: 5px;
+}
 
 .cart-order-header {
     width: calc(100% + 22px );
@@ -55,7 +55,7 @@ html {
     text-align: center;
     color: white;
     letter-spacing: 1px;
-    border-radius: 10px 10px 0 0;
+    border-radius: 3px 3px 0 0;
 }
 
 .delete-button {
@@ -73,7 +73,7 @@ html {
 
 .cart-total-card {
     background: #efefef;
-    border-radius: 10px;
+    border-radius: 3px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -93,10 +93,11 @@ html {
     height: 35px;
     width: 150px;
     border: none;
-    border-radius: 10px;
+    border-radius: 7px;
     background: #ffb347;
     font-size: 20px;
     letter-spacing: .75px;
+    cursor: pointer;
 }
 
 @media (min-width: 750px) {
